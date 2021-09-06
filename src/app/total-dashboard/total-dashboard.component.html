@@ -1,0 +1,147 @@
+<br>
+<div class="row">
+  <div class="col-sm-6">
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card anim" >
+            <div class="row card-body">
+              <div class="col-sm-7">
+              <h5 class="card-title">Active Cases</h5>
+              <p class="card-text">{{totalActiveCases}}</p>
+              <a routerLink="districts" class="btn btn-primary">More Info</a>
+            </div>
+            <div class="col-sm-5">
+              <img src='assets/Active.png'>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card anim">
+            <div class="row card-body">
+              <div class="col-sm-7">
+              <h5 class="card-title">Total Cases</h5>
+              <p class="card-text">{{totalConfirmedCases}}</p>
+              <a routerLink="districts" class="btn btn-primary">More Info</a>
+            </div>
+            <div class="col-sm-5">
+              <img src='assets/Confirmed.png'>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+    <div class="col-sm-6">
+        <div class="card anim">
+            <div class="row card-body">
+              <div class="col-sm-7">
+                <h5 class="card-title">Total Recovered</h5>
+                <p class="card-text">{{totalRecoveredCases}}</p>
+                <a routerLink="districts" class="btn btn-primary">More Info</a>
+              </div>
+              <div class="col-sm-5">
+                <img src='assets/Recovered.png'>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card anim">
+            <div class="row card-body">
+              <div class="col-sm-7">
+              <h5 class="card-title">Total Deaths</h5>
+              <p class="card-text">{{totalReportedDeaths}}</p>
+              <a routerLink="districts" class="btn btn-primary">More Info</a>
+            </div>
+            <div class="col-sm-5">
+              <img src='assets/Death.png'>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-sm-3">
+  <div class=" card bg-white rounded-lg p-5">
+  
+    <!-- Progress bar 1 -->
+    <div class="progress mx-auto" data-value='80'>
+      <span class="progress-left">
+                    <span class="progress-bar border-primary"></span>
+      </span>
+      <span class="progress-right">
+                    <span class="progress-bar border-primary"></span>
+      </span>
+      <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+        <div class="h2 font-weight-bold">{{totalActivePercent}}<sup class="small">%</sup></div>
+      </div>
+      
+</div>
+<br>
+<h2 class="h6 font-weight-bold text-center">Of Active Cases in India</h2>
+</div>
+</div>
+<div class="col-sm-3">
+  <div class=" card bg-white rounded-lg p-5">
+
+    <!-- Progress bar 2 -->
+    <div class="progress_confirmed mx-auto" data-value='80'>
+      <span class="progress-left">
+                    <span class="progress-bar border-primary"></span>
+      </span>
+      <span class="progress-right">
+                    <span class="progress-bar border-primary"></span>
+      </span>
+      <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+        <div class="h2 font-weight-bold">{{totalConfirmedPercent}}<sup class="small">%</sup></div>
+      </div>
+</div><br>
+<h2 class="h6 font-weight-bold text-center">Of Confirmed Cases in India</h2>
+</div>
+</div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <canvas baseChart 
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <canvas baseChart 
+      [datasets]="barChartData_deaths"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+    </div>
+  </div>
+  <br>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+  <table #dataTable class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">District</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Deceased</th>
+      </tr>
+    </thead>
+  </table>
+</div>
+</div>
+</div>

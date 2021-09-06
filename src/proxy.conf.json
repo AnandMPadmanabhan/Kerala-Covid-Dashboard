@@ -1,0 +1,16 @@
+{
+    "/v2/*": {
+      "target": "https://data.covid19india.org",
+      "secure": true,
+      "changeOrigin": true,
+      "loglevel":"debug"
+
+    },
+    "/data.json": {
+        "target": "https://data.covid19india.org",
+        "secure": true,
+        "changeOrigin": true,
+        "loglevel":"debug"
+  
+      }
+  }

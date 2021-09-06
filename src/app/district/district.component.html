@@ -1,0 +1,34 @@
+<div class="header row">
+    <div class="col-sm-12">
+        <h2>{{dist}}</h2>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-3" *ngFor="let chart of district_chart">
+        <div class="card-body rounded-lg shadow">
+            <h4>{{chart.cases}}</h4>
+            <canvas baseChart
+        [data]="chart.pieChartData"
+        [labels]="chart.pieChartLabels"
+        [chartType]="chart.pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="chart.pieChartPlugins"
+        [legend]="chart.pieChartLegend"
+        [colors]="chart.pieChartColors">
+      </canvas>
+      <h6>{{chart.percent}} <small>% of total cases</small></h6>
+            </div>
+        </div>       
+</div>
+<br>
+<div class="row">
+    <div class="card col-sm-12">
+        <div class="card-body rounded-lg shadow">
+           <h6>Active Cases- {{active_percent}} <small>% of total cases</small></h6>
+           <h6>Confirmed Cases- {{confirmed_percent}} <small>% of total cases</small></h6>
+           <h6>Death Cases- {{death_percent}} <small>% of total cases</small></h6>
+           <h6>Recovered Cases- {{recovered_percent}} <small>% of total cases</small></h6>
+        </div>
+    </div>
+</div>
