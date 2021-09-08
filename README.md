@@ -8,6 +8,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Screenshots
 
-![alt text](https://github.com/AnandMPadmanabhan/Kerala-Covid-Dashboard/main/Home.png)
+![alt text](https://github.com/AnandMPadmanabhan/Kerala-Covid-Dashboard/blob/main/Home.PNG)
+
+![alt text](https://github.com/AnandMPadmanabhan/Kerala-Covid-Dashboard/blob/main/District-wise.PNG)
+
+![alt text](https://github.com/AnandMPadmanabhan/Kerala-Covid-Dashboard/blob/main/District.PNG)
 
 
